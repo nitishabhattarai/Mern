@@ -1,9 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import { WorkoutsContextProvider } from "./context/WorkoutContext";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <WorkoutsContextProvider>
+      <App />
+    </WorkoutsContextProvider>
+  </React.StrictMode>
 );
